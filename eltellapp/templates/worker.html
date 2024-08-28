@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workers Profile</title>
+    <link rel="stylesheet" href="{% static 'css/worker.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="workk" style="color: #7c0f35;"><h1>Workers Profile</h1></div>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="textbox"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" id="phonenumber"><br><br>
+            <label for="works">Works:</label>
+            <select id="role" name="works" itemid="role">
+                <option value="logo">Logo Creation</option>
+                <option value="App">App Ideas</option>
+                <option value="Marketing">Marketing Experts</option>
+            </select><br><br>
+            <label for="perhour">Per Hour:</label>
+            <input type="text" name="perhour" id="textbox"><br><br>
+            <label for="experience">Experience:</label>
+            <input type="text" name="experience" id="textbox"><br><br>
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="check">Check me out</label><br><br>
+            <button type="submit">Submit</button>
+
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo</title>
+    <link rel="stylesheet" href="{% static 'css/logo.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        {% for logo in logo %}
+        <div class="fw-1" style="color: #7c0f35;"><h1>Logo</h1></div>
+        
+        <div><img src="{{ logo.file }}" width="50%" class="img-fluid"></div>
+        <form>
+            <label for="description">Description:</label>
+            <input type="text" name="textbox" value="{{ logo.description}}" id="textbox"><br><br>
+            <button type="button">Feedback</button><br><br>
+            <button type="button">Chat</button>
+            <button type="button">Hire</button>
+
+        </form>
+        {% endfor %}
+    </div>
+</body>
+</html>

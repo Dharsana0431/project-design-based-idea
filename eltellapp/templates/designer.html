@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'css/designer.css' %}">
+    
+</head>
+<body>
+    <div class="container des">
+        <div class="fw-bold" style="color: #7c0f35;"><h1>Designers Profile</h1></div>
+        <br>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        <label for="photo">Photo:</label><br>
+        <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .gif"><br>
+        <label for="description">Description:</label>
+        <input type="text" name="textbox" id="textbox"><br>
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="check">Check me out</label><br>
+        <button type="submit" style="background-color: #be93c5;">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

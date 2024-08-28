@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registered User </h1>
+    <div class="container">
+        {% for reg in reg %}
+        <div class="fw-1" style="color: #7c0f35;"><h1>Logo</h1></div>
+        
+        <div><img src="{{ reg.file }}" width="50%" class="img-fluid"></div>
+        
+        {% endfor %}
+    </div>
+<h1>Workers</h1>
+    <div class="container">
+        {% for logo in worker %}
+        <div class="fw-1" style="color: #7c0f35;"><h1>Logo</h1></div>
+        
+        <div><img src="{{ logo.file }}" width="50%" class="img-fluid"></div>
+       
+        {% endfor %}
+    </div>
+    <h1>Marketing Ads</h1>
+    <div class="container">
+        {% for logo in market %}
+        <div class="fw-1" style="color: #7c0f35;"><h1>Logo</h1></div>
+        
+        <div><img src="{{ logo.file }}" width="50%" class="img-fluid"></div>
+    
+        {% endfor %}
+    </div>
+    <h1>Designer Ads</h1>
+    <div class="container">
+        {% for logo in app %}
+        <div class="fw-1" style="color: #7c0f35;"><h1>Logo</h1></div>
+        
+        <div><img src="{{ logo.file }}" width="50%" class="img-fluid"></div>
+      
+        {% endfor %}
+    </div>
+    <h1>Log Ads</h1>
+    <div class="container">
+        {% for logo in logo %}
+        <div class="fw-1" style="color: #7c0f35;"><h1>Logo</h1></div>
+        
+        <div><img src="{{ logo.file }}" width="50%" class="img-fluid"></div>
+       
+        {% endfor %}
+    </div>
+</body>
+</html>
